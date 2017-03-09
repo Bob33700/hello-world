@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="redDark">#801010</color>
+    <color name="lightGray">#20000000</color>
+    <color name="translucent">#c0000000</color>
+    <color name="white">#ffffff</color>
+    <color name="lightGray_bg">#c0c0c0</color>
+
+    <color name="modified">#80ffff00</color>
+    <color name="floatView">#80ffffff</color>
+</resources>

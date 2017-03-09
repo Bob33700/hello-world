@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    >
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:layout_weight="2">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rankTextView"
+                    android:gravity="fill_horizontal"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:layout_marginBottom="6dp"
+                    android:textStyle="bold"
+                    android:textColor="#a0000000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:layout_marginBottom="6dp"
+                    android:textStyle="bold"
+                    android:textColor="#a0000000"
+                    android:text="-"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nameTextView"
+                    android:hint="@string/last_name"
+                    android:gravity="fill_horizontal"
+                    android:fontFamily="sans-serif-light"
+                    android:layout_weight="1"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:layout_marginBottom="6dp"
+                    android:textStyle="bold"
+                    android:textColor="#a0000000"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/phoneTextView"
+                android:hint="@string/phone"
+                android:fontFamily="sans-serif-light"
+                android:layout_weight="1"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+                android:layout_marginBottom="6dp"
+                android:textColor="#a0000000"
+                android:scaleY="1.2"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/answerPicture"
+                android:scaleType="fitCenter"
+                android:layout_weight="2"
+                android:src="@drawable/answer_wait"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/answer_wait"
+                android:id="@+id/answerTextView"
+                android:textColor="@android:color/white"
+                android:textStyle="bold|italic"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="10dp"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/id"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/redDark">
+
+    </LinearLayout>
+</LinearLayout>

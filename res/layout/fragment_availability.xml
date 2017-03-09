@@ -1,0 +1,366 @@
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".receive.AvailabilityFragment"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:gravity="top">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/newUnavailablePediodLayout">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/sos"
+                    android:layout_marginRight="4dp"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/new_unavailable_period_title"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:id="@+id/textView42"
+                    android:textColor="@color/redDark"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/duringButton"
+                    android:checked="true"
+                    android:textOff="@string/during"
+                    android:textOn="@string/during"
+                    android:layout_weight="1"
+                    android:visibility="visible"
+                    android:text="@string/during"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/redDark">
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/untilButton"
+                    android:checked="false"
+                    android:textOff="@string/until"
+                    android:textOn="@string/until"
+                    android:layout_weight="1"
+                    android:alpha=".25"
+                    android:text="@string/until"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/durationLayout"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/absent_during"
+                    android:id="@+id/textView43"
+                    android:gravity="center_vertical"/>
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/durationSpinner"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:id="@+id/untilLayout"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/unavailable"
+                    android:gravity="center_vertical"
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/activity_horizontal_margin">
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:text="@string/absent_until0"
+                            android:id="@+id/radioButton0"
+                            android:fontFamily="sans-serif-light"
+                            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:checked="true"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/absent_until1"
+                            android:id="@+id/radioButton1"
+                            android:fontFamily="sans-serif-light"
+                            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"/>
+
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+                        android:id="@+id/dateTimeLayout">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="top|center_horizontal"
+                                android:layout_weight="2"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:id="@+id/untilDate0"
+                                android:background="@android:color/darker_gray"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:layout_gravity="top|center_horizontal"
+                                android:layout_weight="3"
+                                android:clickable="true"
+                                android:scaleY="1.5"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="top|center_horizontal"
+                                android:text="@string/at"
+                                android:gravity="center"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginRight="6dp"
+                                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:id="@+id/untilTime0"
+                                android:background="@android:color/darker_gray"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:layout_gravity="top|right"
+                                android:layout_weight="3"
+                                android:clickable="true"
+                                android:scaleY="1.5"
+                                />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:id="@+id/dummy"
+                            android:layout_gravity="top|center_horizontal"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:weightSum="4"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                >
+
+                <Button
+                    style="@android:style/Widget.DeviceDefault.Button.Borderless.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@android:string/ok"
+                    android:id="@+id/okButton"
+                    android:layout_gravity="right"
+                    android:textColor="@color/accent_material_light"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/currentUnavailablePeriodLayout"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/sos"
+                    android:layout_marginRight="4dp"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/current_unavailable_period_title"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:id="@+id/textView44"
+                    android:textColor="@color/redDark"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:id="@+id/unavailableUntilLayout">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:text="@string/absent_until0"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:gravity="center_vertical|right"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin"
+                    android:layout_marginRight="6dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:id="@+id/untilDate1"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_weight="3"
+                    android:clickable="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top|center_horizontal"
+                    android:text="@string/at"
+                    android:gravity="center"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:id="@+id/untilTime1"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_gravity="top|right"
+                    android:layout_weight="3"
+                    android:clickable="true"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="@string/absent_until1"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="6dp"
+                android:id="@+id/unavailableEndlessTextView"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:weightSum="4"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+
+                <Button
+                    style="@android:style/Widget.DeviceDefault.Button.Borderless.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/modify"
+                    android:id="@+id/modifyButton"
+                    android:layout_gravity="right"
+                    android:textColor="@color/accent_material_light"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="12dp"/>
+
+                <Button
+                    style="@android:style/Widget.DeviceDefault.Button.Borderless.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/cancel"
+                    android:id="@+id/cancelButton"
+                    android:layout_gravity="right"
+                    android:textColor="@color/accent_material_light"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>

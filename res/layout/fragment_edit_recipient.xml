@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/activity_vertical_margin"
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:descendantFocusability="beforeDescendants">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_weight="1">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:id="@+id/nameTextView"
+                android:hint="@string/last_name"
+                android:gravity="fill_horizontal"
+                android:fontFamily="sans-serif-light"
+                android:selectAllOnFocus="true"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pickContact"
+            android:src="@android:drawable/sym_contact_card"
+            style="@android:style/Widget.DeviceDefault.Button.Borderless.Small"
+            android:scaleType="fitCenter"
+            android:padding="8dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:layout_weight="1"
+            android:id="@+id/phoneHolder">
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:id="@+id/phoneTextView"
+                android:hint="@string/phone"
+                android:fontFamily="sans-serif-light"
+                android:selectAllOnFocus="true"
+                android:minEms="6"
+                android:textColorHint="@android:color/holo_red_dark"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/position"
+            android:id="@+id/positionCheckbox"
+            android:fontFamily="sans-serif-light"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_marginTop="12dp"/>
+    </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:id="@+id/messageHolder"
+        android:visibility="visible"
+        android:baselineAligned="false"
+        android:background="@color/lightGray">
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/messageTextView"
+            android:hint="@string/message"
+            android:minLines="2"
+            android:gravity="top"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="italic"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginTop="10dp"
+        >
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Borderless.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancelButton"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="right"
+            android:text="@string/cancel"
+            android:textColor="@color/accent_material_light"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            />
+
+        <Button
+            style="@android:style/Widget.DeviceDefault.Button.Borderless.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/validButton"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="right"
+            android:text="@string/valid"
+            android:textColor="@color/accent_material_light"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            />
+    </LinearLayout>
+
+</LinearLayout>
